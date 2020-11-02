@@ -1,0 +1,379 @@
+
+    /**
+     * 短信机身
+     */
+
+    .iphone-component.\@sms {
+        position: relative;
+        width: 196px;
+        height: 400px;
+        border-radius: 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .5);
+
+        .iphone-body {
+            position: absolute;
+            left: -1px;
+            top: 0;
+            width: 198px;
+            height: 400px;
+            background: transparent url("./iphone@sms.svg") no-repeat scroll center center;
+
+            /**
+             * [屏幕] 状态栏
+             */
+
+            .iphone-screen_status-bar {
+                position: absolute;
+                left: 13px;
+                top: 12px;
+                width: 172px;
+                height: 15px;
+                border-radius: 15px 15px 0 0;
+
+                .iphone-time {
+                    position: absolute;
+                    left: 18px;
+                    top: 4px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: $iphone-status-bar_icon-color;
+                    -webkit-transform: scale(.7) translate(-50%, 0);
+                    -moz-transform: scale(.7) translate(-50%, 0);
+                    -ms-transform: scale(.7) translate(-50%, 0);
+                    -o-transform: scale(.7) translate(-50%, 0);
+                    transform: scale(.7) translate(-50%, 0);
+                }
+
+                .iphone-icon-signal {
+                    position: absolute;
+                    right: 25px;
+                    top: 2px;
+                    -webkit-transform: scale(.45);
+                    -moz-transform: scale(.45);
+                    -ms-transform: scale(.45);
+                    -o-transform: scale(.45);
+                    transform: scale(.45);
+
+                    .vic-icon {
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: $iphone-status-bar_icon-color;
+                    }
+
+                }
+
+                .iphone-icon-wifi {
+                    position: absolute;
+                    right: 15px;
+                    top: 2px;
+                    -webkit-transform: scale(.36);
+                    -moz-transform: scale(.36);
+                    -ms-transform: scale(.36);
+                    -o-transform: scale(.36);
+                    transform: scale(.36);
+
+                    .vic-icon {
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: $iphone-status-bar_icon-color;
+                    }
+
+                }
+
+                .iphone-icon-battery {
+                    position: absolute;
+                    right: -1px;
+                    top: 2px;
+                    -webkit-transform: scale(.6);
+                    -moz-transform: scale(.6);
+                    -ms-transform: scale(.6);
+                    -o-transform: scale(.6);
+                    transform: scale(.6);
+
+                    .vic-icon {
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: $iphone-status-bar_icon-color;
+                    }
+
+                }
+
+            }
+
+            /**
+             * [屏幕] 页眉
+             */
+
+            .iphone-screen_header {
+                position: absolute;
+                left: 13px;
+                top: 27px;
+                width: 172px;
+                height: 36px;
+
+                .iphone-sms_back {
+                    position: absolute;
+                    left: 6px;
+                    top: 3px;
+
+                    .vic-icon {
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: $iphone-sms_back-color;
+                    }
+
+                }
+
+                .iphone-sms_sender {
+                    position: absolute;
+                    left: 50%;
+                    top: 21px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: $iphone-sms_sender-text-color;
+                    -webkit-transform: translate(-50%, 0) scale(.55);
+                    -moz-transform: translate(-50%, 0) scale(.55);
+                    -ms-transform: translate(-50%, 0) scale(.55);
+                    -o-transform: translate(-50%, 0) scale(.55);
+                    transform: translate(-50%, 0) scale(.55);
+
+                    .vic-icon {
+                        position: absolute;
+                        left: 50%;
+                        top: -26px;
+                        font-size: 16px;
+                        line-height: 16px;
+                        color: $iphone-sms_sender-icon-color;
+                        -webkit-transform: translate(-50%, 0) scale(1.77);
+                        -moz-transform: translate(-50%, 0) scale(1.77);
+                        -ms-transform: translate(-50%, 0) scale(1.77);
+                        -o-transform: translate(-50%, 0) scale(1.77);
+                        transform: translate(-50%, 0) scale(1.77);
+                    }
+
+                }
+
+            }
+
+            /**
+             * [屏幕] 内容
+             */
+
+            .iphone-screen_content {
+                position: absolute;
+                left: 13px;
+                top: 63px;
+                width: 172px;
+                height: 289px;
+
+                /deep/ {
+
+                    .el-scrollbar {
+                        height: 100%;
+
+                        .el-scrollbar__wrap {
+                            overflow: hidden;
+                            width: 100%;
+
+                            .el-scrollbar__view {
+                                display: flex;
+                                flex-direction: column;
+                                overflow: hidden;
+                                width: 100%;
+                            }
+
+                        }
+
+                        .el-scrollbar__bar.is-vertical {
+                            width: 4px;
+                        }
+
+                    }
+
+                    .iphone-sms {
+
+                        & {
+                            position: relative;
+                            max-width: 124px;
+                            margin: 36px 12px 0 12px;
+                            padding: 8px 6px;
+                            border-radius: 12px;
+                            font-size: 12px;
+                            line-height: 16px;
+                            word-break: break-all;
+
+                            &:before {
+                                content: attr(data-time);
+                                position: absolute;
+                                top: -18px;
+                                font-size: 12px;
+                                line-height: 12px;
+                                white-space: nowrap;
+                            }
+
+                            &:after {
+                                content: "\e6b3";
+                                position: absolute;
+                                bottom: 0;
+                                font-family: "vic-icon" !important;
+                                font-style: normal;
+                                font-size: 12px;
+                                line-height: 12px;
+                                -webkit-font-smoothing: antialiased;
+                                -moz-osx-font-smoothing: grayscale;
+                            }
+
+                            &:last-child {
+                                margin-bottom: 12px;
+                            }
+
+                        }
+
+                        &.\@received {
+                            align-self: flex-start;
+                            margin-right: 36px;
+                            color: $iphone-sms_received-text-color;
+                            background-color: $iphone-sms_received-background-color;
+
+                            &:before {
+                                left: 74px;
+                                color: $iphone-sms_received-time-color;
+                                -webkit-transform: translate(-50%, 0);
+                                -moz-transform: translate(-50%, 0);
+                                -ms-transform: translate(-50%, 0);
+                                -o-transform: translate(-50%, 0);
+                                transform: translate(-50%, 0);
+                            }
+
+                            &:after {
+                                left: -4px;
+                                color: $iphone-sms_received-background-color;
+                            }
+
+                        }
+
+                        &.\@send {
+                            align-self: flex-end;
+                            margin-left: 36px;
+                            color: $iphone-sms_send-text-color;
+                            background-color: $iphone-sms_send-background-color;
+
+                            &:before {
+                                right: 74px;
+                                color: $iphone-sms_send-time-color;
+                                -webkit-transform: translate(50%, 0);
+                                -moz-transform: translate(50%, 0);
+                                -ms-transform: translate(50%, 0);
+                                -o-transform: translate(50%, 0);
+                                transform: translate(50%, 0);
+                            }
+
+                            &:after {
+                                right: -4px;
+                                color: $iphone-sms_send-background-color;
+                                -webkit-transform: scaleX(-1);
+                                -moz-transform: scaleX(-1);
+                                -ms-transform: scaleX(-1);
+                                -o-transform: scaleX(-1);
+                                transform: scaleX(-1);
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            /**
+             * [屏幕] 输入栏
+             */
+
+            .iphone-screen_input-bar {
+                position: absolute;
+                left: 13px;
+                bottom: 12px;
+                width: 172px;
+                height: 36px;
+                border-radius: 0 0 15px 15px;
+
+                .iphone-icon-camera {
+                    position: absolute;
+                    left: 8px;
+                    top: 6px;
+                    -webkit-transform: scale(.9);
+                    -moz-transform: scale(.9);
+                    -ms-transform: scale(.9);
+                    -o-transform: scale(.9);
+                    transform: scale(.9);
+
+                    .vic-icon {
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: $iphone-input-bar_icon-color;
+                    }
+
+                }
+
+                .iphone-icon-store {
+                    position: absolute;
+                    left: 27px;
+                    top: 6px;
+                    -webkit-transform: scale(.8);
+                    -moz-transform: scale(.8);
+                    -ms-transform: scale(.8);
+                    -o-transform: scale(.8);
+                    transform: scale(.8);
+
+                    .vic-icon {
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: $iphone-input-bar_icon-color;
+                    }
+
+                }
+
+                .iphone-input {
+                    position: absolute;
+                    left: -5px;
+                    top: 1px;
+                    -webkit-transform: scale(.5);
+                    -moz-transform: scale(.5);
+                    -ms-transform: scale(.5);
+                    -o-transform: scale(.5);
+                    transform: scale(.5);
+
+                    input {
+                        width: 224px;
+                        height: 28px;
+                        padding: 6px 30px 6px 10px;
+                        border: 1px solid $iphone-input-bar_input-border-color;
+                        border-radius: 28px;
+                        outline: none;
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: $iphone-input-bar_input-text-color;
+
+                        &::-webkit-input-placeholder {
+                            color: $iphone-input-bar_input-text-color_placeholder;
+                        }
+
+                    }
+
+                    .vic-icon {
+                        position: absolute;
+                        right: 4px;
+                        top: 4px;
+                        font-size: 20px;
+                        line-height: 20px;
+                        color: $iphone-input-bar_input-sent-color;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

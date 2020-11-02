@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="400px" viewBox="0 0 200 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>模型2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="模型2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(1.000000, 0.000000)">
+            <rect id="矩形" fill="#333333" x="1" y="0" width="196" height="400" rx="30"></rect>
+            <rect id="Mask" fill="#FFFFFF" fill-rule="nonzero" x="13" y="12" width="172" height="376" rx="16"></rect>
+            <path d="M196,83.9981537 C196,83.4468886 196.443865,83 197,83 L198,83 L198,113 L197,113 C196.447715,113 196,112.552635 196,112.001846 L196,83.9981537 Z" id="+" fill="#333333" fill-rule="nonzero" transform="translate(197.000000, 98.000000) scale(-1, 1) translate(-197.000000, -98.000000) "></path>
+            <path d="M196,119.998154 C196,119.446889 196.443865,119 197,119 L198,119 L198,149 L197,149 C196.447715,149 196,148.552635 196,148.001846 L196,119.998154 Z" id="-" fill="#333333" fill-rule="nonzero" transform="translate(197.000000, 134.000000) scale(-1, 1) translate(-197.000000, -134.000000) "></path>
+            <path d="M196,55.0008717 C196,54.4481055 196.443865,54 197,54 L198,54 L198,70 L197,70 C196.447715,70 196,69.5553691 196,68.9991283 L196,55.0008717 Z" id="Sound" fill="#333333" fill-rule="nonzero" transform="translate(197.000000, 62.000000) scale(-1, 1) translate(-197.000000, -62.000000) "></path>
+            <path d="M-1.44328993e-14,92 L1,92 C1.55228475,92 2,92.4445307 2,93.0025482 L2,138.997452 C2,139.551144 1.55613518,140 1,140 L-1.44328993e-14,140 L-1.44328993e-14,92 Z" id="Lock" fill="#333333" fill-rule="nonzero" transform="translate(1.000000, 116.000000) scale(-1, 1) translate(-1.000000, -116.000000) "></path>
+            <rect id="矩形" fill="#E5E5E9" x="13" y="62" width="172" height="1"></rect>
+            <path d="M185,355 L185,371 C185,380.388841 177.388841,388 168,388 L30,388 C20.6111593,388 13,380.388841 13,371 L13,355 L185,355 Z" id="形状结合" fill="#FFFFFF"></path>
+            <path d="M50,12 L148,12 L148,15 C148,21.627417 142.627417,27 136,27 L62,27 C55.372583,27 50,21.627417 50,15 L50,12 Z" id="矩形" fill="#333333" fill-rule="nonzero"></path>
+            <circle id="椭圆形" fill="#000000" fill-rule="nonzero" cx="78" cy="16" r="3"></circle>
+            <circle id="椭圆形-copy-3" fill="#000000" fill-rule="nonzero" cx="121" cy="16" r="2"></circle>
+            <rect id="矩形" fill="#000000" fill-rule="nonzero" x="87" y="15" width="24" height="2" rx="1"></rect>
+        </g>
+    </g>
+</svg>

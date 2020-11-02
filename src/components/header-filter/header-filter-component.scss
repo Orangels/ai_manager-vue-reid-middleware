@@ -1,0 +1,80 @@
+
+    /**
+     * 基础样式
+     */
+
+    .header-filter-component {
+        position: relative;
+        display: flex;
+
+        .header-filter-left, .header-filter-right {
+            display: flex;
+
+            /deep/ {
+
+                & > .input-search-component {
+
+                    .el-button--text {
+                        color: $app-text-n2_color;
+                    }
+
+                }
+
+                & > :not(.\@disabled) > .input-value {
+
+                    &:not(.\@null) {
+                        color: $app-text-n2_color;
+                    }
+
+                    & + .el-input > .el-input__inner, & + .el-input > .el-input__prefix, & + .el-input__inner, & + .el-input__inner > * {
+                        cursor: pointer;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .header-filter-left {
+            flex-grow: 1;
+            flex-wrap: wrap;
+        }
+
+    }
+
+
+
+    /**
+     * 响应式样式
+     */
+
+    @media (min-width: 1920px) {
+
+        .header-filter-component { margin: 0 0 -10px 0; }
+
+    }
+
+    @media (max-width: 1919px) {
+
+        .header-filter-component { margin: 8px 0 -2px 0; }
+
+    }
+
+    @media (min-width: 1366px) {
+
+        .header-filter-left > * { margin-right: 32px; }
+
+    }
+
+    @media (min-width: 1281px) and (max-width: 1365px) {
+
+        .header-filter-left > * { margin-right: 28px; }
+
+    }
+
+    @media (max-width: 1280px) {
+
+        .header-filter-left > * { margin-right: 24px; }
+
+    }

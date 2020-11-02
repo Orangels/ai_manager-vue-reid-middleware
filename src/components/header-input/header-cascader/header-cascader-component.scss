@@ -1,0 +1,77 @@
+
+    .header-cascader-component {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+
+        /deep/ {
+
+            .input-cascader-component {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+
+                .el-input {
+                    opacity: 0;
+                }
+
+                .el-icon-arrow-up {
+                    margin-top: -3px;
+                }
+
+                .el-icon-circle-close {
+                    margin-right: -3px;
+                }
+
+            }
+
+        }
+
+        & {
+
+            .input-value {
+                height: 32px;
+                padding-right: 16px;
+                font-size: 14px;
+                line-height: 32px;
+                white-space: nowrap;
+                color: $app-text-n1_color;
+
+                .input-value_inner {
+                    display: inline-block;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .input-value_inner + .input-value_inner {
+                    margin-left: 5px;
+
+                    &[data-label-separator] {
+                        margin-left: 0;
+
+                        &:before {
+                            content: attr(data-label-separator);
+                        }
+
+                    }
+
+                }
+
+                &.\@null {
+                    color: $ui-input_text-color_placeholder;
+                }
+
+            }
+
+            &:hover .input-value {
+                color: $ui-select_text-color_hover;
+            }
+
+            &.\@disabled .input-value, &.\@disabled:hover .input-value {
+                color: $ui-input_text-color_disabled;
+            }
+
+        }
+
+    }

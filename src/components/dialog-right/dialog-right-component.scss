@@ -1,0 +1,250 @@
+
+    /**
+     * 基础样式
+     */
+
+    .right-dialog-component {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        right: 0;
+        top: 0;
+        z-index: 0;
+        height: 100%;
+        box-shadow: $right-dialog_box-shadow;
+
+        .right-dialog-left {
+            position: relative;
+            z-index: 1;
+            border-right: 1px solid $right-dialog-left_border-color;
+            background-color: $right-dialog-left_background-color;
+        }
+
+        .right-dialog-container {
+            position: relative;
+            min-width: 320px;
+            background-color: $right-dialog_background-color;
+
+            .right-dialog-container_header {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                width: 100%;
+                height: 74px;
+                padding: 24px;
+                text-align: left;
+                white-space: nowrap;
+            }
+
+            .right-dialog-container_content {
+                height: 100%;
+
+                /deep/ {
+
+                    & > .el-scrollbar {
+                        height: 100%;
+                        padding: 74px 0 24px 0;
+
+                        & > .el-scrollbar__wrap {
+                            overflow: hidden;
+                            width: 100%;
+                            height: 100%;
+
+                            & > .el-scrollbar__view {
+                                overflow: hidden;
+                                width: 100%;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .right-dialog-container_footer {
+                position: absolute;
+                left: 0;
+                bottom: 24px;
+                width: 100%;
+                text-align: center;
+                white-space: nowrap;
+
+                .el-button {
+                    width: 128px;
+                }
+
+                .el-button + .el-button {
+                    margin-left: 12px;
+                }
+
+            }
+
+            /**
+             * 修饰类
+             */
+
+            &.\@max-width {
+                width: 1040px;
+            }
+
+            &.\@large-width {
+                width: 800px;
+            }
+
+            &.\@small-width {
+                width: 320px;
+            }
+
+            &.\@max-width.\@full-width {
+                width: 1280px;
+            }
+
+            &.\@large-width.\@full-width {
+                width: 1040px;
+            }
+
+            &.\@small-width.\@full-width {
+                width: 560px;
+            }
+
+            &:not(.\@small-width) {
+                overflow: hidden;
+
+                .right-dialog-container_header {
+                    box-shadow: $right-dialog-container-header_box-shadow;
+                }
+
+            }
+
+            &.\@footer .right-dialog-container_content .el-scrollbar {
+                padding-bottom: 72px;
+            }
+
+        }
+
+    }
+
+
+
+    /**
+     * 头部样式
+     */
+
+    .right-dialog-component .right-dialog-container_header {
+
+        /deep/ {
+
+            .el-breadcrumb {
+                float: left;
+
+                .el-breadcrumb__inner {
+                    font-weight: 800;
+                    font-size: 18px;
+                    line-height: 26px;
+                    cursor: default;
+                    color: $right-dialog-container-header_breadcrumb-color_inner;
+                }
+
+                .el-breadcrumb__separator {
+                    font-size: 12px;
+                    line-height: 26px;
+                    color: $right-dialog-container-header_breadcrumb-color_separator;
+                }
+
+            }
+
+            .el-button--text.back {
+
+                & {
+                    float: left;
+                    margin-right: 24px;
+
+                    .vic-icon {
+                        font-size: 18px;
+                        line-height: 26px;
+                        color: $right-dialog-container-header_icon-back-color;
+                    }
+
+                }
+
+                &:hover {
+
+                    .vic-icon {
+                        color: $right-dialog-container-header_icon-back-color_hover;
+                    }
+
+                }
+
+            }
+
+            .el-button--text.close {
+
+                & {
+                    position: absolute;
+                    right: 24px;
+                    top: 24px;
+                    width: 26px;
+                    height: 26px;
+                    border-width: 0;
+                    border-radius: 26px;
+                    background-color: $right-dialog-container-header_icon-close-background-color;
+
+                    .vic-icon {
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: $right-dialog-container-header_icon-close-color;
+                    }
+
+                }
+
+                &:hover {
+                    background-color: $right-dialog-container-header_icon-close-background-color_hover;
+
+                    .vic-icon {
+                        color: $right-dialog-container-header_icon-close-color_hover;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+    /**
+     * 顶层样式
+     */
+
+    .right-dialog-component .el-dialog__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $right-dialog-top-modal_background-color;
+
+        /deep/ {
+
+            .el-dialog {
+                margin: 0 !important;
+                border-radius: 4px;
+                box-shadow: $right-dialog-top_box-shadow;
+                background-color: $right-dialog-top_background-color;
+
+                .el-dialog__header {
+                    display: none;
+                }
+
+                .el-dialog__body {
+                    padding: 0;
+                }
+
+            }
+
+        }
+
+    }

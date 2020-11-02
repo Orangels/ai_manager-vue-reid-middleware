@@ -1,0 +1,91 @@
+
+    .input-text-component {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+
+        /**
+         * 有 n/n 的文本输入框
+         */
+
+        &.\@maxlength {
+            width: 100%;
+
+            /deep/ {
+
+                .el-input__inner {
+                    padding-right: 40px;
+                }
+
+                .el-input__suffix {
+                    right: 35px;
+                }
+
+            }
+
+            .input-text-length {
+                position: absolute;
+                right: 0;
+                bottom: 9px;
+                z-index: 1;
+                font-size: 14px;
+                line-height: 14px;
+                color: $app-text-n3_color;
+            }
+
+        }
+
+        /**
+         * 有 n/n 的多行文本输入框
+         */
+
+        &.\@textarea.\@maxlength {
+
+            /deep/ {
+
+                .el-textarea {
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 17px;
+                        right: 17px;
+                        top: 1px;
+                        height: 16px;
+                        background-color: $ui-input_background-color;
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: 17px;
+                        right: 17px;
+                        bottom: 1px;
+                        height: 36px;
+                        background-color: $ui-input_background-color;
+                    }
+
+                    .el-textarea__inner {
+                        padding: 16px 16px 36px 16px;
+                    }
+
+                }
+
+                .el-textarea.is-disabled {
+
+                    &:before, &:after {
+                        background-color: $ui-input_background-color_disabled;
+                    }
+
+                }
+
+            }
+
+            .input-text-length {
+                right: 8px;
+                bottom: 8px;
+            }
+
+        }
+
+    }

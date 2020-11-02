@@ -1,0 +1,322 @@
+
+    /**
+     * 基础样式
+     */
+
+    .input-upload-component {
+
+        .input-upload {
+
+            /deep/ {
+
+                .el-upload {
+                    margin-bottom: 16px;
+                }
+
+                .el-upload__tip {
+                    margin-top: -8px;
+                    margin-bottom: 16px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: $input-upload_tip-color;
+                }
+
+            }
+
+        }
+
+        .input-upload-list {
+
+            .input-upload-list_item {
+
+                & + .input-upload-list_item {
+                    margin-top: 16px;
+                }
+
+                /**
+                 * 文件
+                 */
+
+                .input-upload-list_file {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    .input-upload-list_file-name {
+                        order: 2;
+                        overflow: hidden;
+                        width: calc(100% - 60px);
+                        margin-left: 8px;
+                        margin-right: 22px;
+                        font-size: 14px;
+                        line-height: 16px;
+                        text-overflow: ellipsis;
+                        text-decoration: none;
+                        white-space: nowrap;
+                        outline: none;
+                        cursor: default;
+                        color: $input-upload-item_file-name-color;
+
+                        &[href^="http"]:hover {
+                            cursor: pointer;
+                            color: $input-upload-item_file-name-color_hover;
+                        }
+
+                    }
+
+                    .vic-icon.\@icon-file {
+                        order: 1;
+                        font-size: 16px;
+                        line-height: 16px;
+                        color: $input-upload-item_file-icon-color;
+                    }
+
+                    .vic-icon.\@icon-excel {
+                        order: 1;
+                        font-size: 16px;
+                        line-height: 16px;
+                        color: $input-upload-item_file-icon-color_excel;
+                    }
+
+                    .vic-icon.\@icon-pdf {
+                        order: 1;
+                        font-size: 16px;
+                        line-height: 16px;
+                        color: $input-upload-item_file-icon-color_pdf;
+                    }
+
+                    .vic-icon.\@base-success_circle-solid {
+                        order: 3;
+                        font-size: 14px;
+                        line-height: 14px;
+                        color: $input-upload-item_file-right-icon-color;
+                    }
+
+                    .vic-icon.\@base-sigh_circle-solid {
+                        order: 3;
+                        font-size: 14px;
+                        line-height: 14px;
+                        color: $input-upload-item_file-right-icon-color_error;
+                    }
+
+                    .vic-icon.\@base-fail_circle-solid {
+                        order: 3;
+                        font-size: 14px;
+                        line-height: 14px;
+                        cursor: pointer;
+                        color: $input-upload-item_file-right-icon-color_delete;
+                    }
+
+                }
+
+                /**
+                 * 进度
+                 */
+
+                .input-upload-list_progress {
+                    position: relative;
+                    height: 4px;
+                    margin-top: 8px;
+                    border-radius: 2px;
+                    background-color: $input-upload-item_progress-background-color;
+
+                    .input-upload-list_progress-thumb {
+                        height: 4px;
+                        border-radius: 2px;
+                        background-color: $input-upload-item_progress-thumb-color;
+                        -webkit-transition: width .6s ease;
+                        -moz-transition: width .6s ease;
+                        -ms-transition: width .6s ease;
+                        -o-transition: width .6s ease;
+                        transition: width .6s ease;
+                    }
+
+                    .input-upload-list_progress-text {
+                        position: absolute;
+                        right: 0;
+                        top: -21px;
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: $input-upload-item_progress-text-color;
+                    }
+
+                }
+
+                /**
+                 * 错误
+                 */
+
+                .input-upload-list_error {
+                    position: relative;
+                    margin-top: 8px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: $app-text-error_color;
+                }
+
+            }
+
+            /**
+             * 状态、修饰类
+             */
+
+            .input-upload-list_item {
+
+                &.v-enter-active, &.v-leave-active {
+                    -webkit-transition: all .4s ease;
+                    -moz-transition: all .4s ease;
+                    -ms-transition: all .4s ease;
+                    -o-transition: all .4s ease;
+                    transition: all .4s ease;
+                }
+
+                &.v-enter, &.v-leave-to {
+                    opacity: 0;
+                    -webkit-transform: translateY(100%);
+                    -moz-transform: translateY(100%);
+                    -ms-transform: translateY(100%);
+                    -o-transform: translateY(100%);
+                    transform: translateY(100%);
+                }
+
+                & .input-upload-list_progress, & .input-upload-list_error, &:hover .input-upload-list_progress-text, & .vic-icon.\@base-success_circle-solid, & .vic-icon.\@base-sigh_circle-solid, & .vic-icon.\@base-fail_circle-solid {
+                    display: none;
+                }
+
+                &.\@progress .input-upload-list_progress, &.\@error .input-upload-list_error, &:not(:hover) .input-upload-list_progress-text {
+                    display: block;
+                }
+
+                &:not(.\@progress):not(.\@error):not(:hover) .vic-icon.\@base-success_circle-solid, &:not(.\@progress):not(:hover).\@error .vic-icon.\@base-sigh_circle-solid, &:hover .vic-icon.\@base-fail_circle-solid {
+                    display: inline;
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+    /**
+     * 拖拽的样式
+     */
+
+    .input-upload-component.\@drag {
+
+        .input-upload {
+
+            /deep/ {
+
+                .el-upload {
+                    width: 100%;
+
+                    .el-upload-dragger {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-content: center;
+                        width: 100%;
+                        height: 150px;
+                        border: 1px dashed $input-upload-dragger_border-color;
+                        border-radius: 4px;
+                        background-color: $input-upload-dragger_background-color;
+
+                        .vic-icon.\@base-batch-upload_solid {
+                            font-size: 32px;
+                            line-height: 32px;
+                            color: $input-upload-dragger_icon-color;
+                        }
+
+                        & > span {
+                            margin-top: 20px;
+                            font-size: 14px;
+                            line-height: 14px;
+                            white-space: nowrap;
+                            color: $input-upload-dragger_text-color;
+
+                            & > span {
+                                color: $input-upload-dragger_text-color_a;
+                            }
+
+                        }
+
+                    }
+
+                    .el-upload-dragger:hover {
+                        border-color: $input-upload-dragger_border-color_hover;
+                        background-color: $input-upload-dragger_background-color_hover;
+
+                        .vic-icon.\@base-batch-upload_solid {
+                            color: $input-upload-dragger_icon-color_hover;
+                        }
+
+                    }
+
+                    .el-upload-dragger.is-dragover, .el-upload-dragger.is-dragover:hover {
+                        border-color: $input-upload-dragger_border-color_dragover;
+                        background-color: $input-upload-dragger_background-color_dragover;
+
+                        .vic-icon.\@base-batch-upload_solid {
+                            color: $input-upload-dragger_icon-color_dragover;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+    /**
+     * 禁用的样式
+     */
+
+    .input-upload-component.\@disabled {
+
+        .input-upload {
+
+            /deep/ {
+
+                .el-upload {
+
+                    .el-upload-dragger, .el-upload-dragger:hover, .el-upload-dragger.is-dragover, .el-upload-dragger.is-dragover:hover {
+                        border-color: $input-upload-dragger_border-color_disabled;
+                        background-color: $input-upload-dragger_background-color_disabled;
+                        cursor: not-allowed;
+
+                        .vic-icon.\@base-batch-upload_solid {
+                            color: $input-upload-dragger_icon-color_disabled;
+                        }
+
+                        & > span, & > span > span {
+                            color: $input-upload-dragger_text-color_disabled;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .input-upload-list .input-upload-list_item:hover {
+
+            .vic-icon.\@base-success_circle-solid {
+                display: inline;
+            }
+
+            .vic-icon.\@base-fail_circle-solid {
+                display: none;
+            }
+
+        }
+
+    }

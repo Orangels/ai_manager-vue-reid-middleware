@@ -1,0 +1,60 @@
+
+    .card-value-component {
+
+        & {
+            position: relative;
+            height: 180px;
+
+            & > .card-value-title {
+                position: absolute;
+                left: 24px;
+                top: 24px;
+                font-weight: 800;
+                font-size: 18px;
+                line-height: 18px;
+                color: $app-text-n1_color;
+            }
+
+            & > .card-value-value {
+                position: absolute;
+                display: flex;
+                left: 24px;
+                top: 74px;
+                font-size: 48px;
+                line-height: 48px;
+                color: $app-text-n1_color;
+            }
+
+            & > .card-value-sub {
+                position: absolute;
+                display: flex;
+                left: 24px;
+                bottom: 16px;
+                font-size: 14px;
+                line-height: 14px;
+                color: $app-text-n2_color;
+
+                & > .card-value-value {
+                    margin-left: 18px;
+
+                    .vic-icon.\@base-trend_solid {
+                        font-size: 12px;
+                        color: $app-text-up_color;
+                    }
+
+                    .vic-icon.\@base-decline_solid {
+                        font-size: 12px;
+                        color: $app-text-down_color;
+                    }
+
+                }
+
+            }
+
+        }
+
+        &.\@short {
+            height: 138px;
+        }
+
+    }

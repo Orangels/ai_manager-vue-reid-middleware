@@ -1,0 +1,78 @@
+
+    .input-cascader-popover {
+        padding: 0;
+        border: 1px solid $input-cascader-popover_border-color;
+        box-shadow: $input-cascader-popover_box-shadow;
+        background-color: $input-cascader-popover_background-color;
+
+        &.el-popper .popper__arrow {
+            left: 35px !important;
+        }
+
+        &.el-popper[x-placement^="top"] .popper__arrow {
+            border-top-color: $input-cascader-popover_border-color;
+        }
+
+        &.el-popper[x-placement^="bottom"] .popper__arrow {
+            border-bottom-color: $input-cascader-popover_border-color;
+        }
+
+        .input-cascader-popover_content {
+            display: flex;
+
+            .input-cascader-popover_column {
+
+                & {
+                    min-width: 82px;
+                    height: 244px;
+
+                    .input-cascader-popover_cell {
+                        height: 40px;
+                        padding: 12px 16px;
+
+                        &:hover {
+                            background-color: $input-cascader-popover_cell-background-color_hover;
+                        }
+
+                    }
+
+                    .el-scrollbar {
+                        height: 100%;
+                        padding: 4px 0;
+
+                        .el-scrollbar__wrap {
+                            height: 100%;
+                            overflow-x: hidden;
+                        }
+
+                    }
+
+                }
+
+                & + .input-cascader-popover_column {
+                    min-width: 83px;
+                    border-left: 1px solid $input-cascader-popover_waterline-color;
+                }
+
+            }
+
+        }
+
+        .input-cascader-popover_footer {
+            height: 51px;
+            padding: 12px 16px;
+            border-top: 1px solid $input-cascader-popover_waterline-color;
+            text-align: right;
+
+            .el-button + .el-button {
+                margin-left: 20px;
+            }
+
+            .el-button--text {
+                font-size: 12px;
+                line-height: 12px;
+            }
+
+        }
+
+    }

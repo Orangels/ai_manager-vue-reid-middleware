@@ -1,0 +1,38 @@
+
+    /deep/ {
+
+        .el-breadcrumb__item {
+
+            .el-breadcrumb__inner, .el-breadcrumb__inner:hover, .el-breadcrumb__separator {
+                color: $app-text-n3_color;
+            }
+
+            .el-breadcrumb__inner {
+                cursor: pointer;
+            }
+
+            &:last-child .el-breadcrumb__inner {
+                cursor: default;
+            }
+
+        }
+
+    }
+
+    .echarts-valdistmap-component {
+        position: relative;
+
+        .echarts-valdistmap-filter {
+            position: absolute;
+            right: 24px;
+            top: 24px;
+        }
+
+        .el-breadcrumb {
+            position: absolute;
+            left: 54%;
+            top: 72px;
+            z-index: 1;
+        }
+
+    }

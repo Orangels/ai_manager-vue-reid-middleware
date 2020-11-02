@@ -1,0 +1,89 @@
+
+    .header-datepicker-component {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+
+        /deep/ {
+
+            & {
+
+                .el-date-editor--date.el-input {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+
+                    .el-input__inner {
+                        opacity: 0;
+                    }
+
+                    .el-input__suffix {
+                        right: -5px;
+                    }
+
+                }
+
+                .el-date-editor--datetimerange.el-input__inner {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    border-width: 0;
+                    background-color: transparent;
+
+                    .el-range-input, .el-range-separator {
+                        opacity: 0;
+                    }
+
+                    .el-range__icon {
+                        right: -4px;
+                        top: 1px;
+                    }
+
+                    .el-range__close-icon {
+                        right: -4px;
+                        top: 0;
+                    }
+
+                }
+
+            }
+
+            &:not(.\@null).\@clearable:hover {
+
+                .el-date-editor--date.el-input .el-input__prefix, .el-date-editor--datetimerange.el-input__inner .el-icon-time {
+                    display: none;
+                }
+
+            }
+
+        }
+
+        & {
+
+            .input-value {
+                height: 32px;
+                padding-right: 22px;
+                font-size: 14px;
+                line-height: 32px;
+                white-space: nowrap;
+                color: $app-text-n1_color;
+
+                &.\@null {
+                    color: $ui-input_text-color_placeholder;
+                }
+
+            }
+
+            &:hover .input-value {
+                color: $ui-select_text-color_hover;
+            }
+
+            &.\@disabled .input-value, &.\@disabled:hover .input-value {
+                color: $ui-input_text-color_disabled;
+            }
+
+        }
+
+    }

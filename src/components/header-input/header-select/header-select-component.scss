@@ -1,0 +1,120 @@
+
+    .header-select-component {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+
+        /**
+         * 单选、空值
+         */
+
+        &:not(.\@multiple), &.\@null {
+
+            /deep/ {
+
+                .el-select {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+
+                    .el-input {
+
+                        .el-input__inner {
+                            opacity: 0;
+                        }
+
+                        .el-icon-arrow-up {
+                            margin-top: -3px;
+                        }
+
+                        .el-icon-circle-close {
+                            margin-right: -3px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+            & {
+
+                .input-value {
+                    overflow: hidden;
+                    height: 32px;
+                    padding-right: 16px;
+                    font-size: 14px;
+                    line-height: 32px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    color: $app-text-n1_color;
+
+                    &.\@null {
+                        color: $ui-input_text-color_placeholder;
+                    }
+
+                }
+
+                &:hover .input-value {
+                    color: $ui-select_text-color_hover;
+                }
+
+                &.\@disabled .input-value, &.\@disabled:hover .input-value {
+                    color: $ui-input_text-color_disabled;
+                }
+
+            }
+
+        }
+
+        /**
+         * 多选
+         */
+
+        &:not(.\@null).\@multiple {
+            height: 32px;
+
+            /deep/ {
+
+                .el-select {
+
+                    .el-input {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        z-index: 1;
+
+                        .el-input__inner {
+                            opacity: 0;
+                        }
+
+                        .el-icon-arrow-up {
+                            margin-top: -3px;
+                        }
+
+                    }
+
+                    .el-select__tags {
+                        position: relative;
+                        left: 0;
+                        top: 0;
+                        z-index: 2;
+                        max-width: none !important;
+                        width: auto !important;
+                        height: 32px;
+                        padding-right: 12px;
+
+                        .el-tag {
+                            margin: 6px 4px 6px 0;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

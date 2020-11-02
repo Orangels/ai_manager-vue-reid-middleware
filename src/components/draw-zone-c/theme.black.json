@@ -1,0 +1,14 @@
+{
+    "draw": {
+        "vertexBrush": {
+            "rightStroke": "#2288FC",
+            "errorStroke": "#FF391E",
+            "hoverStroke": "#8FC1EC"
+        },
+        "borderBrush": {
+            "rightStroke": "#2288FC",
+            "errorStroke": "#FF391E",
+            "hoverStroke": "#8FC1EC"
+        }
+    }
+}

@@ -1,0 +1,87 @@
+
+    /**
+     * 基础样式
+     */
+
+    .header-component {
+        position: relative;
+        height: 30px;
+
+        .header-title {
+            position: relative;
+            top: 7px;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 24px;
+            color: $app-text-n1_color;
+        }
+
+        .header-right {
+            position: absolute;
+            right: 0;
+            top: 3px;
+
+            & > * + * {
+                margin-left: 16px;
+            }
+
+        }
+
+    }
+
+
+
+    /**
+     * 右侧样式
+     */
+
+    .header-right /deep/ {
+
+        .input-search-component {
+
+            & {
+                position: relative;
+                top: -2px;
+                width: 20px !important;
+
+                .el-button {
+                    top: 6px;
+                }
+
+                .el-input__inner {
+                    padding-left: 28px !important;
+                }
+
+            }
+
+            &.\@input {
+                width: 220px !important;
+            }
+
+        }
+
+        .el-button--text {
+            position: relative;
+            top: 3px;
+            color: $app-text-n3_color;
+
+            .vic-icon {
+                font-size: 20px;
+                line-height: 20px;
+            }
+
+            sup {
+                position: absolute;
+                left: 9px;
+                top: -11px;
+                padding: 1px 4px;
+                border-radius: 14px;
+                font-size: 12px;
+                line-height: 12px;
+                color: #FFFFFF;
+                background-color: $app-text-super_color;
+            }
+
+        }
+
+    }

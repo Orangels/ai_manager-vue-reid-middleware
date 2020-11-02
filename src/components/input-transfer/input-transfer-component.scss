@@ -1,0 +1,219 @@
+
+    /**
+     * el-tree
+     */
+
+    /deep/ .el-tree {
+
+        .el-tree-node {
+
+            .el-tree-node__content {
+                display: flex;
+                height: 40px;
+
+                .el-tree-node__label {
+                    order: 2;
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: $input-transfer-node_text-color;
+
+                    .vic-icon.\@base-arrow-right {
+                        padding: 6px;
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: $input-transfer-node_icon-right-color;
+                    }
+
+                }
+
+                .el-tree-node__expand-icon {
+                    order: 3;
+                    font-family: "vic-icon" !important;
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: $input-transfer-node_icon-expand-color;
+
+                    &:before {
+                        content: "\e62c";
+                    }
+
+                    &.is-leaf {
+                        color: transparent;
+                    }
+
+                    &.expanded {
+                        -webkit-transform: rotateZ(180deg);
+                        -moz-transform: rotateZ(180deg);
+                        -ms-transform: rotateZ(180deg);
+                        -o-transform: rotateZ(180deg);
+                        transform: rotateZ(180deg);
+                    }
+
+                }
+
+                .el-checkbox {
+                    order: 1;
+                    margin-left: 16px;
+                    margin-right: 8px;
+                }
+
+            }
+
+            .el-tree-node__content:hover {
+                background-color: $input-transfer-node_background-color_hover;
+            }
+
+            &.is-current > .el-tree-node__content:not(:hover) {
+                background-color: transparent;
+            }
+
+        }
+
+        .el-tree__empty-block {
+            position: absolute;
+            left: calc(50% - 100px);
+            top: 47px;
+            width: 200px;
+            height: 200px;
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url($base64_NoData);
+
+            .el-tree__empty-text {
+                display: none;
+            }
+
+        }
+
+    }
+
+
+
+    /**
+     * 基础样式
+     */
+
+    .input-transfer-component {
+        position: relative;
+        display: inline-block;
+        width: 736px;
+        height: 428px;
+        vertical-align: middle;
+
+        .input-transfer-data {
+            position: absolute;
+            left: 0;
+            right: calc(50% + 44px);
+            top: 0;
+            bottom: 0;
+            border: 1px solid $input-transfer-container_border-color;
+            border-radius: 4px;
+            background-color: $input-transfer-container_background-color;
+
+            /deep/ {
+
+                .el-tabs {
+                    height: 100%;
+
+                    .el-tabs__header {
+                        height: 40px;
+                        padding: 14px 16px 0 16px;
+                        border-radius: 4px 4px 0 0;
+                        background-color: $input-transfer-container-header_background-color;
+                    }
+
+                    .el-tabs__content {
+                        overflow: auto;
+                        height: calc(100% - 40px);
+                        padding: 8px 0;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .input-transfer-value {
+            position: absolute;
+            left: calc(50% + 44px);
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border: 1px solid $input-transfer-container_border-color;
+            border-radius: 4px;
+            background-color: $input-transfer-container_background-color;
+
+            .input-transfer-value_header {
+                height: 40px;
+                border-radius: 4px 4px 0 0;
+                background-color: $input-transfer-container-header_background-color;
+
+                .el-checkbox {
+                    position: relative;
+                    left: 16px;
+                    top: 11px;
+                }
+
+                span {
+                    position: absolute;
+                    left: 16px;
+                    top: 13px;
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: $ui-checkbox_label-color;
+                }
+
+            }
+
+            .input-transfer-value_content {
+                overflow: auto;
+                height: calc(100% - 40px);
+                padding: 8px 0;
+            }
+
+        }
+
+        .input-transfer-button {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            left: calc(50% - 44px);
+            right: calc(50% - 44px);
+            top: 0;
+            bottom: 0;
+
+            .el-button {
+                width: 40px;
+                height: 40px;
+                border-radius: 40px;
+                color: $input-transfer-button_text-color;
+                background-color: $input-transfer-button_background-color;
+
+                &:hover {
+                    color: $input-transfer-button_text-color_hover;
+                    background-color: $input-transfer-button_background-color_hover;
+                }
+
+                &.is-disabled, &.is-disabled:hover {
+                    color: $input-transfer-button_text-color_disabled;
+                    background-color: $input-transfer-button_background-color_disabled;
+                }
+
+            }
+
+            .el-button.remove {
+                margin-top: 40px;
+                -webkit-transform: rotateZ(180deg);
+                -moz-transform: rotateZ(180deg);
+                -ms-transform: rotateZ(180deg);
+                -o-transform: rotateZ(180deg);
+                transform: rotateZ(180deg);
+            }
+
+        }
+
+    }

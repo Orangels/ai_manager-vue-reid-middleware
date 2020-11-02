@@ -1,0 +1,36 @@
+
+    .draw-zone-component {
+
+        & {
+            position: relative;
+
+            &.\@cursor-default {
+                cursor: default;
+            }
+
+            &.\@cursor-add {
+                cursor: pointer;
+            }
+
+            &.\@cursor-move {
+                cursor: move;
+            }
+
+            /deep/ svg {
+                position: absolute !important;
+                left: 0;
+                top: 0;
+                z-index: 1;
+            }
+
+        }
+
+        &.\@draw {
+
+            /deep/ svg {
+                z-index: 2;
+            }
+
+        }
+
+    }

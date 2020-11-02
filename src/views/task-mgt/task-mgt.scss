@@ -1,0 +1,18 @@
+// 当前页面样式
+.page-component{
+    margin-top:7px;
+    .wrapper-container {
+        .content-container {
+            .header-filter-left{
+                .el-input{
+                    width:13%;
+                }
+                .float_r{
+                    position: absolute;
+                    right:0;
+                    margin-right:0;
+                }
+            }
+        }
+    }
+}

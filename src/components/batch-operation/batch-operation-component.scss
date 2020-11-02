@@ -1,0 +1,107 @@
+
+    .batch-operation-component {
+
+        & {
+            position: absolute;
+            display: flex;
+            z-index: 2;
+            left: 0;
+            right: 0;
+            top: -58px;
+            height: 50px;
+            border-radius: 4px;
+            box-shadow: $app-container_box-shadow;
+            background-color: $app-container_background-color;
+            -webkit-transition: all .5s cubic-bezier(.55, 0, .1, 1);
+            -moz-transition: all .5s cubic-bezier(.55, 0, .1, 1);
+            -ms-transition: all .5s cubic-bezier(.55, 0, .1, 1);
+            -o-transition: all .5s cubic-bezier(.55, 0, .1, 1);
+            transition: all .5s cubic-bezier(.55, 0, .1, 1);
+
+            .batch-operation_selected {
+                flex-grow: 0;
+                align-self: center;
+                margin-left: 24px;
+            }
+
+            .batch-operation_total {
+                flex-grow: 0;
+                align-self: center;
+                margin-left: 16px;
+            }
+
+            .batch-operation_view-selected, .batch-operation_view-all {
+                flex-grow: 0;
+                align-self: center;
+                margin-left: 24px;
+            }
+
+            .batch-operation_clear-selected {
+                flex-grow: 1;
+                align-self: center;
+                margin-left: 16px;
+            }
+
+            .batch-operation_batch-export, .batch-operation_batch-import, .batch-operation_batch-edit, .batch-operation_batch-delete {
+                flex-grow: 0;
+                align-self: center;
+                margin-right: 24px;
+            }
+
+        }
+
+        &.\@hide {
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transform: translate(0, 100%);
+            -moz-transform: translate(0, 100%);
+            -ms-transform: translate(0, 100%);
+            -o-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+        }
+
+    }
+
+    /**
+     * 已选
+     */
+
+    .batch-operation_selected {
+        display: flex;
+        font-size: 14px;
+        line-height: 14px;
+        white-space: nowrap;
+        color: $app-text-n1_color;
+
+        .batch-operation_label {
+            color: $app-text-n3_color;
+        }
+
+        .batch-operation_value {
+            margin-right: 4px;
+            font-size: 18px;
+            vertical-align: -4px;
+        }
+
+    }
+
+    /**
+     * 合计
+     */
+
+    .batch-operation_total {
+        display: flex;
+        font-size: 14px;
+        line-height: 14px;
+        white-space: nowrap;
+        color: $app-text-n1_color;
+
+        .batch-operation_label {
+            color: $app-text-n3_color;
+        }
+
+        .batch-operation_value {
+            margin-right: 4px;
+        }
+
+    }

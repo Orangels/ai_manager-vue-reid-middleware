@@ -1,0 +1,83 @@
+
+    .input-checkbox-component {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 280px;
+        background-color: $input-checkbox_background-color;
+
+        /deep/ {
+
+            .input-checkbox-column {
+
+                & {
+                    flex-grow: 1;
+
+                    .input-checkbox-cell {
+                        position: relative;
+                        z-index: 0;
+                        height: 40px;
+                        line-height: 19px;
+
+                        .el-checkbox {
+                            position: relative;
+                            left: 15px;
+                            top: 11px;
+                            max-width: calc(100% - 36px);
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+
+                        &.\@icon-right:after {
+                            content: "\e60c";
+                            position: absolute;
+                            right: 9px;
+                            top: 14px;
+                            font-family: "vic-icon" !important;
+                            font-style: normal;
+                            font-size: 12px;
+                            line-height: 12px;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                            cursor: pointer;
+                            color: $input-checkbox-cell_icon-right-color;
+                        }
+
+                        &.\@selection {
+                            background-color: $input-checkbox-cell_background-color_selection;
+                        }
+
+                    }
+
+                    .el-scrollbar__wrap, .el-scrollbar__view {
+                        overflow: hidden;
+                        width: 100%;
+                    }
+
+                }
+
+                & + .input-checkbox-column {
+                    border-left: 1px solid $input-checkbox_waterline-color;
+                }
+
+            }
+
+            .input-checkbox-column.\@checkall {
+
+                .input-checkbox-cell.\@checkall {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+                    width: 100%;
+                    background-color: $input-checkbox_background-color;
+                }
+
+                .el-scrollbar__wrap {
+                    padding-top: 40px;
+                }
+
+            }
+
+        }
+
+    }

@@ -1,0 +1,181 @@
+{
+    "user1": {
+        "code": 1,
+        "result": "success",
+        "data": {
+            "list|30": [
+                {
+                    "id": "@guid",
+                    "username": "@cname",
+                    "age|10-100": 1,
+                    "isshow|1-2": true,
+                    "date": "@now",
+                    "imgUrl": "https://avatar.csdn.net/8/5/D/3_bocongbo.jpg"
+                }
+            ],
+            "total": 30
+        },
+        "msg": ""
+    },
+    "user2": {
+        "code": 1,
+        "result": "success",
+        "data": {
+            "list|30": [
+                {
+                    "id": "@guid",
+                    "username": "@cname",
+                    "age|10-100": 1,
+                    "isshow|1-2": true,
+                    "date": "@now",
+                    "imgUrl": "https://avatar.csdn.net/8/5/D/3_bocongbo.jpg"
+                }
+            ],
+            "total": 30
+        },
+        "msg": ""
+    },
+    "user3": {
+        "code": 1,
+        "result": "success",
+        "data": {
+            "list|30": [
+                {
+                    "id": "@guid",
+                    "username": "@cname",
+                    "age|10-100": 1,
+                    "isshow|1-2": true,
+                    "date": "@now",
+                    "imgUrl": "https://avatar.csdn.net/8/5/D/3_bocongbo.jpg"
+                }
+            ],
+            "total": 30
+        },
+        "msg": ""
+    },
+    "userList": {
+        "code": 1,
+        "result": "success",
+        "data": {
+            "list|30": [
+                {
+                    "_id": "@guid",
+                    "name": "@cname",
+                    "type": "",
+                    "dead_line": "2019-09-10",
+                    "count": 1000,
+                    "completed_num|10-1000": 500,
+                    "collection_count|10-1000":10,
+                    "status|1":["待标注","待验收","已验收"]
+                }
+            ],
+            "total": 30
+        },
+        "msg": ""
+    },
+    "mgtList": {
+        "code": 1,
+        "result": "success",
+        "data": {
+            "list|30": [
+                {
+                    "_id": "@guid",
+                    "name": "@cname",
+                    "data_id": "@guid",
+                    "data_name": "@guid",
+                    "mession_templates_id": "",
+                    "mession_templates_name": "",
+                    "dead_line": "2019-09-10",
+                    "status|1":["待标注","待验收","已验收"]
+                }
+            ],
+            "total": 30
+        },
+        "msg": ""
+    },
+    "markMgtData": {
+		"code": 0,
+		"message": "OK",
+		"data": {
+			"pic_list": [{
+				"id": "5d80c887f349955075e88d90",
+                "name": "Hydrangeas.jpg",
+                "path": "http://172.16.104.200:8000/collection/Hydrangeas.jpg",
+				"is_collection": false,
+				"mark": [{
+					"key": "element_face",
+					"tag_name": "人脸",
+                    "tag_tool": "bndbox",
+					"coordinate": [{ "x": 134, "y": 90 }, { "x": 557, "y": 414 }]
+                },{
+					"key": "element_body",
+					"tag_name": "身体",
+					"tag_tool": "bndbox",
+					"coordinate": [{ "x": 444, "y": 192 }, { "x": 833, "y": 537 }]
+                }],
+				"whd": {
+					"width": 1200,
+					"height": 966,
+					"depth": 3
+				},
+				"pic_info": [{
+					"key": "gender",
+					"value": ["male"]
+				}, {
+					"key": "goods",
+					"value": ["0001", "0002"]
+				}]				
+			}],
+            "is_collection": false,
+            "count": 1000,
+			"complete_num": 500,
+			"page_num": 1
+		}
+    },
+    "markMgtTemp": {
+		"code": 0,
+		"message": "OK",
+		"data": {
+			"element_tag_list": [{
+				"key": "element_face",
+				"name": "人脸",
+				"tool": "bndbox",
+				"color": "#ff0000"
+			},{
+				"key": "element_body",
+				"name": "身体",
+				"tool": "bndbox",
+				"color": "#438989"
+			}],
+			"pic_tag_list": [{
+				"key": "gender",
+				"name": "性别",
+				"operation": "single",
+				"option_list": [{
+					"key": "male",
+					"name": "男"
+				}, {
+					"key": "female",
+					"name": "女"
+				}, {
+					"key": "unknown",
+					"name": "未知"
+				}]
+			},{
+				"key": "goods",
+				"name": "遮挡物",
+				"operation": "multi",
+				"option_list": [{
+					"key": "0001",
+					"name": "柜子"
+				}, {
+					"key": "0002",
+					"name": "桌子"
+				}, {
+					"key": "unknown",
+					"name": "未知"
+				}]
+			}]
+		}
+	}
+}

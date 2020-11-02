@@ -1,0 +1,47 @@
+/deep/{
+    .el-form-item {
+        .el-table {
+            .el-input__inner{
+                background-color: transparent;
+                border:1px solid #eee;
+            }
+        }
+    }
+    .pic_tag{
+        width:100%;
+        overflow:hidden;
+        margin-top:30px;
+        .pic_tag_list{
+            width:100%;
+            div{
+                // width:45%;
+                // display:inline-block;
+            }
+        }
+        
+        // .pic_CN{
+        //     float:left;
+        //     width:30%;
+        // }
+        // .pic_EN{
+        //     // width:45%;
+        //     width:30%;
+        //     float:left;
+        // }
+    }
+    .line{
+        height:2px;
+        background: #EDEDED;
+        width:100%;
+        margin:20px 0;
+    }
+    .gap{
+        margin-left:100px;
+    }
+    .labelspacing{
+        margin-left:25px;
+        .el-form-item__content{
+            margin-left:40px!important;
+        }
+    }
+}

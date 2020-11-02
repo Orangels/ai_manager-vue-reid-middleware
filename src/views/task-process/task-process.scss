@@ -1,0 +1,22 @@
+// 当前页面样式
+.wrapper-container {
+    min-width:1300px;
+    .content-container {
+        .content-tabs{
+            div{
+                float:left;
+            }
+            .date-tabs{
+                margin-top:10px;
+            }
+            .date-btn{
+                margin-bottom:10px;
+            }
+        }
+        .el-form{
+            .el-row{
+                width:100%;
+            }
+        }
+    }
+}

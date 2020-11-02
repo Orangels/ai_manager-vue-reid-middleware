@@ -1,0 +1,381 @@
+
+    /**
+     * 水平
+     */
+
+    .step-bar-component.\@horizontal {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+        height: 70px;
+        padding: 22px 22px 0 22px;
+
+        & > .step-bar-step {
+
+            & {
+                position: relative;
+                flex-grow: 1;
+
+                .step-bar-step_circle {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 1;
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 17px;
+                    box-shadow: $step-bar-horizontal_circle-box-shadow;
+                    font-family: "vic-icon" !important;
+                    font-style: normal;
+                    font-size: 17px;
+                    line-height: 17px;
+                    text-indent: -7px;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    color: $step-bar-horizontal_circle-color;
+                    background-color: $step-bar-horizontal_circle-background-color;
+                    -webkit-transform: translate(50%, -6px);
+                    -moz-transform: translate(50%, -6px);
+                    -ms-transform: translate(50%, -6px);
+                    -o-transform: translate(50%, -6px);
+                    transform: translate(50%, -6px);
+
+                    &:before {
+                        content: "\e698";
+                    }
+
+                }
+
+                .step-bar-step_line {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 0;
+                    width: 100%;
+                    height: 5px;
+                    background-color: $step-bar-horizontal_line-color;
+                }
+
+                .step-bar-step_link {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 1;
+                    font-size: 14px;
+                    line-height: 14px;
+                    white-space: nowrap;
+                    cursor: not-allowed;
+                    color: $step-bar-horizontal_link-color;
+                    -webkit-transform: translate(50%, 33px);
+                    -moz-transform: translate(50%, 33px);
+                    -ms-transform: translate(50%, 33px);
+                    -o-transform: translate(50%, 33px);
+                    transform: translate(50%, 33px);
+                }
+
+            }
+
+            &:first-child {
+                flex-grow: 0;
+
+                .step-bar-step_circle {
+                    text-indent: 0;
+
+                    &:before {
+                        content: "\e696";
+                    }
+
+                }
+
+            }
+
+            &:last-child {
+
+                .step-bar-step_circle {
+                    text-indent: 0;
+                    -webkit-transform: translate(50%, -6px) rotateZ(180deg);
+                    -moz-transform: translate(50%, -6px) rotateZ(180deg);
+                    -ms-transform: translate(50%, -6px) rotateZ(180deg);
+                    -o-transform: translate(50%, -6px) rotateZ(180deg);
+                    transform: translate(50%, -6px) rotateZ(180deg);
+
+                    &:before {
+                        content: "\e696";
+                    }
+
+                }
+
+            }
+
+        }
+
+        & > .step-bar-step.\@entry, & > .step-bar-step.\@finished {
+
+            & {
+
+                .step-bar-step_circle {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 32px;
+                    box-shadow: $step-bar-horizontal_circle-box-shadow_entry;
+                    font-size: 32px;
+                    line-height: 32px;
+                    text-indent: 0;
+                    color: $step-bar-horizontal_circle-color_entry;
+                    background-color: $step-bar-horizontal_circle-background-color_entry;
+                    -webkit-transform: translate(50%, -15px);
+                    -moz-transform: translate(50%, -15px);
+                    -ms-transform: translate(50%, -15px);
+                    -o-transform: translate(50%, -15px);
+                    transform: translate(50%, -15px);
+                }
+
+                .step-bar-step_line {
+                    background-color: $step-bar-horizontal_line-color_entry;
+                }
+
+                .step-bar-step_link {
+                    cursor: pointer;
+                    color: $step-bar-horizontal_link-color_entry;
+
+                    &:hover {
+                        color: $step-bar-horizontal_link-color_hover;
+                    }
+
+                }
+
+            }
+
+            &.\@entry .step-bar-step_circle:before {
+                content: "\e6a3";
+            }
+
+            &.\@finished .step-bar-step_circle:before {
+                content: "\e6a2";
+            }
+
+            &.\@finished:first-child .step-bar-step_circle:before {
+                content: "\e694";
+            }
+
+        }
+
+        & > .step-bar-step.\@pointer {
+
+            .step-bar-step_link {
+                cursor: default;
+
+                &:hover {
+                    color: $step-bar-horizontal_link-color_entry;
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+    /**
+     * 垂直
+     */
+
+    .step-bar-component.\@vertical {
+        padding: 12px 0 12px 12px;
+
+        & > .step-bar-step {
+            position: relative;
+
+            & > .step-bar-step {
+                display: flex;
+                flex-direction: column;
+
+                .step-bar-step_circle {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 17px;
+                    box-shadow: $step-bar-vertical_circle-box-shadow;
+                    font-family: "vic-icon" !important;
+                    font-style: normal;
+                    font-size: 17px;
+                    line-height: 17px;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    color: $step-bar-vertical_circle-color;
+                    background-color: $step-bar-vertical_circle-background-color;
+
+                    &:before {
+                        content: "\e6a6";
+                        vertical-align: -1px;
+                    }
+
+                }
+
+                .step-bar-step_line {
+                    position: absolute;
+                    left: 8px;
+                    top: 0;
+                    bottom: 0;
+                    z-index: 0;
+                    width: 1px;
+                    background-color: $step-bar-vertical_line-color;
+                }
+
+                .step-bar-step_link {
+                    position: relative;
+                    align-self: baseline;
+                    left: 36px;
+                    top: 3px;
+                    z-index: 1;
+                    font-size: 16px;
+                    line-height: 16px;
+                    white-space: nowrap;
+                    cursor: not-allowed;
+                    color: $step-bar-vertical_link-color;
+                }
+
+            }
+
+            & > .step-bar-step_children {
+                display: flex;
+                flex-direction: column;
+                padding-top: 18px;
+                padding-bottom: 18px;
+
+                .step-bar-step_link {
+                    position: relative;
+                    align-self: baseline;
+                    left: 52px;
+                    top: 2px;
+                    z-index: 1;
+                    margin-top: 12px;
+                    margin-bottom: 12px;
+                    font-size: 14px;
+                    line-height: 14px;
+                    white-space: nowrap;
+                    cursor: not-allowed;
+                    color: $step-bar-vertical_link-color;
+                }
+
+            }
+
+        }
+
+        /**
+         * @entry, @finished
+         */
+
+        & > .step-bar-step.\@entry, & > .step-bar-step.\@finished {
+
+            & > .step-bar-step {
+
+                .step-bar-step_circle {
+                    left: -3px;
+                    top: -3px;
+                    width: 23px;
+                    height: 23px;
+                    border-radius: 23px;
+                    box-shadow: $step-bar-vertical_circle-box-shadow_entry;
+                    font-size: 23px;
+                    line-height: 23px;
+                    color: $step-bar-vertical_circle-color_entry;
+                    background-color: $step-bar-vertical_circle-background-color_entry;
+                }
+
+                .step-bar-step_line {
+                    background-color: $step-bar-vertical_line-color_entry;
+                }
+
+                .step-bar-step_link {
+                    cursor: pointer;
+                    color: $step-bar-vertical_link-color_entry;
+
+                    &:hover {
+                        color: $step-bar-vertical_link-color_hover;
+                    }
+
+                }
+
+            }
+
+            &.\@entry > .step-bar-step .step-bar-step_circle:before {
+                content: "\e6a3";
+                vertical-align: 0;
+            }
+
+            &.\@finished > .step-bar-step .step-bar-step_circle:before {
+                content: "\e6a2";
+                vertical-align: 0;
+            }
+
+        }
+
+        & > .step-bar-step > .step-bar-step_children {
+
+            .step-bar-step_link.\@entry, .step-bar-step_link.\@finished {
+                cursor: pointer;
+                color: $step-bar-vertical_link-color_entry;
+
+                &:hover {
+                    color: $step-bar-vertical_link-color_hover;
+                }
+
+            }
+
+        }
+
+        /**
+         * @pointer
+         */
+
+        & > .step-bar-step.\@pointer {
+
+            & > .step-bar-step .step-bar-step_link {
+                cursor: default;
+
+                &:hover {
+                    color: $step-bar-vertical_link-color_entry;
+                }
+
+            }
+
+        }
+
+        & > .step-bar-step > .step-bar-step_children {
+
+            .step-bar-step_link.\@pointer {
+                cursor: default;
+
+                &:hover {
+                    color: $step-bar-vertical_link-color_entry;
+                }
+
+                &:before {
+                    content: "\e6a5";
+                    position: absolute;
+                    left: -50px;
+                    top: 1px;
+                    font-family: "vic-icon" !important;
+                    font-style: normal;
+                    font-size: 12px;
+                    line-height: 12px;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    -webkit-transform: scale(.7);
+                    -moz-transform: scale(.7);
+                    -ms-transform: scale(.7);
+                    -o-transform: scale(.7);
+                    transform: scale(.7);
+                }
+
+            }
+
+        }
+
+    }
